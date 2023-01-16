@@ -1,11 +1,3 @@
-<!--
- * @Date: 2023-01-16 16:14:28
- * @LastEditors: Lamwolff wangning13@corp.netease.com
- * @LastEditTime: 2023-01-16 16:17:47
- * @FilePath: /yanxuan-ic-plan-web/home/netease/core/nextjs-blog/posts/pre-rendering.md
- * @Description: 
- * @Author: Lamwolff wangning13@corp.netease.com
--->
 ---
 title: 'Two Forms of Pre-rendering'
 date: '2020-01-01'
