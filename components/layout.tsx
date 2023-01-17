@@ -1,8 +1,8 @@
 /*
  * @Date: 2023-01-13 10:50:14
  * @LastEditors: Lamwolff wangning13@corp.netease.com
- * @LastEditTime: 2023-01-13 14:04:27
- * @FilePath: /yanxuan-ic-plan-web/home/netease/core/nextjs-blog/components/layout.js
+ * @LastEditTime: 2023-01-17 10:01:59
+ * @FilePath: /yanxuan-ic-plan-web/home/netease/core/nextjs-blog/components/layout.tsx
  * @Description: 
  * @Author: Lamwolff wangning13@corp.netease.com
  */
@@ -15,7 +15,10 @@ import Link from 'next/link';
 const name = 'Your Name';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({children, home}) {
+export default function Layout({children, home}: {
+  children: React.ReactNode,
+  home?: boolean
+}) {
   return (
     <div className={styles.container}>
       <Head>
