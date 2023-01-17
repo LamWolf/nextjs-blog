@@ -1,8 +1,8 @@
 /*
  * @Date: 2023-01-12 11:23:53
  * @LastEditors: Lamwolff wangning13@corp.netease.com
- * @LastEditTime: 2023-01-16 14:59:16
- * @FilePath: /yanxuan-ic-plan-web/home/netease/core/nextjs-blog/pages/index.js
+ * @LastEditTime: 2023-01-17 10:37:11
+ * @FilePath: /yanxuan-ic-plan-web/home/netease/core/nextjs-blog/pages/index.tsx
  * @Description: 
  * @Author: Lamwolff wangning13@corp.netease.com
  */
@@ -12,8 +12,9 @@ import Date from '../components/date';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
+import { GetStaticProps } from 'next';
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
@@ -22,7 +23,15 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({allPostsData}) {
+export default function Home({
+  allPostsData
+}:{
+  allPostsData: {
+    date: string;
+    title: string;
+    id: string;
+  }[]
+}) {
   return (
     <Layout home>
       <Head>
